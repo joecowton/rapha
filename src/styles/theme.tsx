@@ -7,7 +7,8 @@ const colors = {
   green: '#36b154',
   grey: '#dce9e2',
   black: '#000',
-  white: '#fff'
+  white: '#fff',
+  pink: '#f67599'
 };
 
 const gridValues = {
