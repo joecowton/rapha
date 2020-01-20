@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+import { css } from 'styled-components/macro';
 
 import { device } from './media';
 
@@ -24,7 +24,7 @@ const gridValues = {
   lg: {
     gutter: 1.5,
     padding: 1.5,
-    maxWidth: '78rem'
+    maxWidth: '100rem'
   }
 };
 
