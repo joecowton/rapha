@@ -37,14 +37,14 @@ export default () => {
   };
 
   return (
-    <S.Main>
-      <S.MainInner>
+    <S.Carousel>
+      <S.Inner>
         <Slider {...settings}>
           <S.Image src={imageOne} />
           <S.Image src={imageTwo} />
           <S.Image src={imageThree} />
         </Slider>
-      </S.MainInner>
-    </S.Main>
+      </S.Inner>
+    </S.Carousel>
   );
 };

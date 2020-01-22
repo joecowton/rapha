@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { device } from '../../styles/media';
 
-export const Main = styled.div`
+export const Carousel = styled.div`
   background-color: ${props => props.theme.colors.white};
   height: 100%;
   position: relative;
@@ -27,13 +27,18 @@ export const Main = styled.div`
   }
 `;
 
-export const MainInner = styled.div`
-  ${props => props.theme.gridStyles.getContainerStyles()}
+export const Inner = styled.div`
   display: flex;
   justify-content: center;
 
   .slick-dots li {
     margin: 0;
+  }
+
+  @media ${device.md} {
+    ${props => props.theme.gridStyles.getContainerStyles()}
+
+    opacity: 1;
   }
 `;
 
@@ -60,10 +65,12 @@ export const PrevArrow = styled.div`
 `;
 
 export const Image = styled.img`
-  padding: 10px 0 0;
-
   img {
     height: 100%;
     width: 100%;
+  }
+
+  @media ${device.md} {
+    padding: 10px 0 0;
   }
 `;
