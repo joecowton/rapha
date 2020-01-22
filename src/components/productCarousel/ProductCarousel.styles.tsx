@@ -11,7 +11,15 @@ export const ProductCarousel = styled.div`
   }
 
   .slick-slider {
-    width: 80%;
+    width: 100%;
+
+    @media ${device.md} {
+      width: 60%;
+    }
+
+    @media ${device.lg} {
+      width: 40%;
+    }
   }
 
   .MuiSvgIcon-root {
@@ -28,14 +36,15 @@ export const ProductCarousel = styled.div`
 `;
 
 export const Inner = styled.div`
-  ${props => props.theme.gridStyles.getContainerStyles()}
   display: flex;
   justify-content: center;
-`;
 
-export const Dots = styled.div`
-  &.slick-dots li button::before {
-    font-size: 12px;
+  @media ${device.md} {
+    ${props => props.theme.gridStyles.getContainerStyles()}
+  }
+
+  .slick-dots li {
+    margin: 0;
   }
 `;
 
