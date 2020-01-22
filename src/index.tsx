@@ -9,6 +9,7 @@ import GlobalStyles from './styles/GlobalStyles';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import 'hamburgers/dist/hamburgers.css';
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
