@@ -18,8 +18,8 @@ const gridValues = {
     maxWidth: '100%'
   },
   md: {
-    gutter: 1.5,
-    padding: 1.5,
+    gutter: 2,
+    padding: 2,
     maxWidth: '100%'
   },
   lg: {
