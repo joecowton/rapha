@@ -7,31 +7,64 @@ export const Banner = styled.div``;
 
 export const Inner = styled.div`
   ${props => props.theme.gridStyles.getContainerStyles()}
-
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px 15px;
 `;
 
 export const Logo = styled.div`
   display: flex;
   justify-content: center;
-  padding: 20px 0 15px;
 `;
 
 export const ItemsRight = styled.div`
   display: flex;
   justify-content: right;
-  padding: 20px 0 15px;
 `;
 
 export const ItemsLeft = styled.div`
   display: flex;
-  justify-content: left;
-  padding: 20px 0 15px;
+  justify-content: right;
+`;
+
+export const BurgerWrapper = styled.div<{ active?: boolean }>`
+  padding: 10px;
+  display: flex;
+
+  button {
+    padding: 0;
+  }
+
+  .hamburger {
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  .hamburger-inner::before {
+    top: ${({ active }) => (active ? '0' : '-7px')};
+  }
+  .hamburger-inner::after {
+    top: ${({ active }) => (active ? '0' : '7px')};
+  }
+
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    width: 20px;
+    height: 2px;
+  }
+
+  .hamburger-box {
+    width: 17px;
+    height: 17px;
+  }
 `;
 
 export const IconWrapper = styled.div`
   padding: 10px;
+  display: flex;
 
   &:hover {
     cursor: pointer;
