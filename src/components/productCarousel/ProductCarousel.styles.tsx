@@ -52,7 +52,7 @@ export const NextArrow = styled.div`
   position: absolute;
   z-index: 100;
   top: calc(50% - 20px);
-  right: 20px;
+  right: -40px;
 
   &:hover {
     cursor: pointer;
@@ -63,7 +63,7 @@ export const PrevArrow = styled.div`
   position: absolute;
   z-index: 100;
   top: calc(50% - 20px);
-  left: 20px;
+  left: -40px;
 
   &:hover {
     cursor: pointer;
