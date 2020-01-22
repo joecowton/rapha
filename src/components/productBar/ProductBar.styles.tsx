@@ -54,6 +54,8 @@ export const Price = styled.h3`
   letter-spacing: 0.4px;
   margin: 0;
   display: none;
+  text-align: right;
+  padding-right: 20px;
 
   @media ${device.md} {
     font-size: 2.4rem;
