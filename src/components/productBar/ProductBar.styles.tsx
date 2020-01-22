@@ -16,9 +16,7 @@ export const Inner = styled.div`
   ${props => props.theme.gridStyles.getContainerStyles()}
   display: flex;
   justify-content: space-between;
-  padding: 15px;
   align-items: center;
-  padding: 0 10px;
 `;
 
 export const ButtonWrapper = styled.div`

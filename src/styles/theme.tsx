@@ -13,13 +13,13 @@ const colors = {
 
 const gridValues = {
   sm: {
-    gutter: 0.5, // 16px
-    padding: 0.5,
+    gutter: 1.5, // 16px
+    padding: 1.5,
     maxWidth: '100%'
   },
   md: {
-    gutter: 1,
-    padding: 1,
+    gutter: 1.5,
+    padding: 1.5,
     maxWidth: '100%'
   },
   lg: {
