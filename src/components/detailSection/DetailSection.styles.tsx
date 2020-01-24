@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { device } from '../../styles/media';
+import Select from 'react-select';
 
 export const DetailSection = styled.div`
   ${props => props.theme.gridStyles.getContainerStyles()}
@@ -38,9 +39,11 @@ export const SubHeading = styled.h3`
 
 export const ColumnWrapper = styled.div`
   margin-top: 30px;
+  margin-bottom: 30px;
 
   @media ${device.md} {
     margin-top: 50px;
+    margin-bottom: 60px;
   }
 `;
 
@@ -50,4 +53,28 @@ export const LeftHandColumn = styled.div`
 
 export const RightHandColumn = styled.div`
   ${props => props.theme.gridStyles.getColStyles(12, 6, 6)}
+`;
+
+export const SelectWrapper = styled.div`
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+`;
+
+export const StyledSelect = styled(Select)`
+  width: 100%;
+  text-align: left;
+
+  @media ${device.md} {
+    width: 40%;
+  }
+
+  @media ${device.lg} {
+    width: 40%;
+  }
+`;
+
+export const Section = styled.div`
+  max-width: 85rem;
+  margin: auto;
 `;
