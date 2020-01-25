@@ -2,33 +2,44 @@ import styled, { css } from 'styled-components/macro';
 import { device } from '../../styles/media';
 
 const LinkStyles = css`
-  font-size: 14px;
+  font-size: 12px;
   padding: 10px;
   font-weight: 700;
   text-decoration: underline;
   cursor: pointer;
+  width: 100%;
+  float: left;
+  text-align: center;
+
+  @media ${device.md} {
+    font-size: 14px;
+    width: 100%;
+  }
 `;
 
 export const AddToBasket = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0;
+  padding: 0;
   border-top: 1px solid lightGrey;
   border-bottom: 1px solid lightGrey;
-  margin-top: 40px;
+  margin-top: 20px;
   flex-direction: column;
+  padding: 0 0 20px;
 
   @media ${device.md} {
+    margin-top: 40px;
+    padding: 20px 0;
     flex-direction: row-reverse;
   }
 `;
 
-export const SizeGuide = styled.a`
+export const SizeGuide = styled.div`
   ${LinkStyles}
 `;
 
-export const Wishlist = styled.a`
+export const Wishlist = styled.div`
   ${LinkStyles}
   border-right: 1px solid lightgrey;
 `;

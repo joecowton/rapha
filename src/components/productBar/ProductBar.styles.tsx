@@ -45,7 +45,6 @@ export const Button = styled.button`
 `;
 
 export const Price = styled.h3`
-  ${props => props.theme.gridStyles.getColStyles(2, 2, 2)}
   font-size: 1.3rem;
   text-transform: uppercase;
   font-weight: bold;
@@ -67,9 +66,10 @@ export const Title = styled.h3`
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 0.4px;
-  margin: 0;
+  padding-left: 0;
 
   @media ${device.md} {
     font-size: 2.4rem;
+    padding-left: 0;
   }
 `;

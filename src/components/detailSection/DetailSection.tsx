@@ -27,8 +27,6 @@ export default () => (
     <S.SelectWrapper>
       <S.StyledSelect options={options} defaultValue={defaultValue} />
     </S.SelectWrapper>
-    <S.Section>
-      <AddToBasket />
-    </S.Section>
+    <AddToBasket />
   </S.DetailSection>
 );

@@ -50,7 +50,7 @@ export const Inner = styled.div`
 
 export const NextArrow = styled.div`
   position: absolute;
-  z-index: 100;
+  z-index: 2;
   top: calc(50% - 20px);
   right: -40px;
 
@@ -61,7 +61,7 @@ export const NextArrow = styled.div`
 
 export const PrevArrow = styled.div`
   position: absolute;
-  z-index: 100;
+  z-index: 2;
   top: calc(50% - 20px);
   left: -40px;
 

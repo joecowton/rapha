@@ -10,6 +10,7 @@ export const DetailSection = styled.div`
 
   @media ${device.md} {
     margin-top: 60px;
+    width: 85rem;
   }
 `;
 
@@ -72,9 +73,4 @@ export const StyledSelect = styled(Select)`
   @media ${device.lg} {
     width: 40%;
   }
-`;
-
-export const Section = styled.div`
-  max-width: 85rem;
-  margin: auto;
 `;
