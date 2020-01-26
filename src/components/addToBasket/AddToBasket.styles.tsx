@@ -23,7 +23,6 @@ export const AddToBasket = styled.div`
   justify-content: space-between;
   padding: 0;
   border-top: 1px solid lightGrey;
-  border-bottom: 1px solid lightGrey;
   margin-top: 20px;
   flex-direction: column;
   padding: 0 0 20px;

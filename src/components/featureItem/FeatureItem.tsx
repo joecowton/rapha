@@ -10,7 +10,7 @@ interface Props {
 
 export default ({ image, copy }: Props) => (
   <S.Item>
-    <Fade>
+    <Fade bottom>
       <S.Image src={image} />
       <S.Copy>{copy}</S.Copy>
     </Fade>

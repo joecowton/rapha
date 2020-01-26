@@ -18,7 +18,7 @@ export const ProductCarousel = styled.div`
     }
 
     @media ${device.lg} {
-      width: 40%;
+      width: 60%;
     }
   }
 

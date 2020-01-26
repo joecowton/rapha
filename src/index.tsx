@@ -4,6 +4,7 @@ import * as serviceWorker from './serviceWorker';
 import App from './App';
 
 import { ThemeProvider } from 'styled-components';
+import ContextProvider from './ContextProvider';
 import theme from './styles/theme';
 import GlobalStyles from './styles/GlobalStyles';
 
@@ -13,10 +14,10 @@ import 'hamburgers/dist/hamburgers.css';
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
-    <>
+    <ContextProvider>
       <GlobalStyles />
       <App />
-    </>
+    </ContextProvider>
   </ThemeProvider>,
   document.getElementById('root')
 );

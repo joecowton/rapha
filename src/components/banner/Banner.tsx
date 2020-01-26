@@ -1,21 +1,24 @@
 import React from 'react';
 import logo from '../../assets/logo.svg';
 import Hamburger from 'react-hamburgers';
+import { Context } from '../../ContextProvider';
 
 import * as S from './Banner.styles';
 
 export default () => {
-  const [active, setActive] = React.useState(false);
+  const { setMenuOpen, menuOpen } = React.useContext(Context);
 
   return (
     <S.Banner>
       <S.Inner>
         <S.ItemsLeft>
-          <S.BurgerWrapper active={active}>
+          <S.BurgerWrapper active={menuOpen}>
             <Hamburger
               type="vortex"
-              active={active}
-              onClick={() => setActive(!active)}
+              active={menuOpen}
+              onClick={() => {
+                setMenuOpen(!menuOpen);
+              }}
             />
           </S.BurgerWrapper>
           <S.IconWrapper>

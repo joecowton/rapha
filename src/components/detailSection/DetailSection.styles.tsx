@@ -48,16 +48,8 @@ export const ColumnWrapper = styled.div`
   }
 `;
 
-export const LeftHandColumn = styled.div`
-  ${props => props.theme.gridStyles.getColStyles(12, 6, 6)}
-`;
-
-export const RightHandColumn = styled.div`
-  ${props => props.theme.gridStyles.getColStyles(12, 6, 6)}
-`;
-
 export const SelectWrapper = styled.div`
-  margin-top: 40px;
+  /* margin-top: 40px; */
   display: flex;
   justify-content: center;
 `;
