@@ -1,10 +1,10 @@
 import React from 'react';
 import Banner from './components/banner/Banner';
-import Carousel from './components/carousel/Carousel';
 import ProductBar from './components/productBar/ProductBar';
 import DetailSection from './components/detailSection/DetailSection';
 import Features from './components/features/Features';
 import Footer from './components/footer/Footer';
+import HeroCarousel from './components/heroCarousel/HeroCarousel';
 
 import * as S from './App.styles';
 import Menu from './components/menu/Menu';
@@ -30,7 +30,7 @@ const App: React.FC = () => {
       <Banner />
       <ProductBar />
       <Menu />
-      <Carousel />
+      <HeroCarousel />
       <DetailSection />
       <Features />
       <Footer />

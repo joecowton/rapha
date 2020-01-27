@@ -113,12 +113,37 @@ const fontWeight = {
   bold: 700
 };
 
+const fontSizes = {
+  body: '1.6rem',
+  button: '1.4rem',
+  header: {
+    small: '2rem',
+    large: '3rem'
+  },
+  subHeader: {
+    small: '1.8rem',
+    large: '2.4rem'
+  },
+  menu: {
+    small: '1.3rem',
+    large: '2.4rem'
+  }
+};
+
+const indexs = {
+  arrows: 2,
+  nav: 3,
+  menu: 4
+};
+
 const theme = {
-  gridValues,
-  gridStyles,
   colors,
   fonts,
-  fontWeight
+  fontWeight,
+  fontSizes,
+  gridValues,
+  gridStyles,
+  indexs
 };
 
 export default theme;

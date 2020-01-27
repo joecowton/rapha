@@ -1,19 +1,19 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { device } from '../../styles/media';
 
 export const ProductBar = styled.div`
-  background-color: ${props => props.theme.colors.black};
-  color: ${props => props.theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.black};
+  color: ${({ theme }) => theme.colors.white};
   height: 70px;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: ${({ theme }) => theme.indexs.nav};
   align-items: center;
   display: flex;
 `;
 
 export const Inner = styled.div`
-  ${props => props.theme.gridStyles.getContainerStyles()}
+  ${({ theme }) => theme.gridStyles.getContainerStyles()}
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,12 +25,12 @@ export const ButtonWrapper = styled.div`
 `;
 
 export const Button = styled.button`
-  border: 1px solid ${props => props.theme.colors.white};
-  color: ${props => props.theme.colors.white};
-  background-color: ${props => props.theme.colors.black};
+  border: 1px solid ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.black};
   cursor: pointer;
-  font-size: 1.4rem;
-  font-weight: 600;
+  font-size: ${({ theme }) => theme.fontSizes.button};
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
   line-height: 1.6rem;
   padding: 1rem 2rem;
   min-width: 6rem;
@@ -39,15 +39,15 @@ export const Button = styled.button`
   width: 16rem;
 
   &:hover {
-    border: 1px solid ${props => props.theme.colors.pink};
-    color: ${props => props.theme.colors.pink};
+    border: 1px solid ${({ theme }) => theme.colors.pink};
+    color: ${({ theme }) => theme.colors.pink};
   }
 `;
 
 export const Price = styled.h3`
-  font-size: 1.3rem;
+  font-size: ${({ theme }) => theme.fontSizes.menu.small};
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
   letter-spacing: 0.4px;
   margin: 0;
   display: none;
@@ -55,21 +55,21 @@ export const Price = styled.h3`
   padding-right: 20px;
 
   @media ${device.md} {
-    font-size: 2.4rem;
+    font-size: ${({ theme }) => theme.fontSizes.menu.large};
     display: block;
   }
 `;
 
 export const Title = styled.h3`
-  ${props => props.theme.gridStyles.getColStyles(6, 9, 9)}
-  font-size: 1.3rem;
+  ${({ theme }) => theme.gridStyles.getColStyles(6, 9, 9)}
+  font-size: ${({ theme }) => theme.fontSizes.menu.small};
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight:${({ theme }) => theme.fontWeight.bold};
   letter-spacing: 0.4px;
   padding-left: 0;
 
   @media ${device.md} {
-    font-size: 2.4rem;
+    font-size: ${({ theme }) => theme.fontSizes.menu.large};
     padding-left: 0;
   }
 `;

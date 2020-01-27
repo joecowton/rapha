@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 export const Item = styled.div`
-  ${props => props.theme.gridStyles.getColStyles(12, 4, 4)}
+  ${({ theme }) => theme.gridStyles.getColStyles(12, 4, 4)}
 `;
 
 export const Image = styled.img`
@@ -10,7 +10,7 @@ export const Image = styled.img`
 `;
 
 export const Copy = styled.p`
-  font-size: 1.4rem;
+  font-size: ${({ theme }) => theme.fontSizes.copy};
   line-height: 2.1rem;
   letter-spacing: 0.4px;
 `;

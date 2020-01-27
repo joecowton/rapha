@@ -4,7 +4,7 @@ import { device } from '../../styles/media';
 const LinkStyles = css`
   font-size: 12px;
   padding: 10px;
-  font-weight: 700;
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
   text-decoration: underline;
   cursor: pointer;
   width: 100%;
@@ -20,7 +20,6 @@ const LinkStyles = css`
 export const AddToBasket = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 0;
   border-top: 1px solid lightGrey;
   margin-top: 20px;
@@ -49,10 +48,11 @@ export const Section = styled.div`
   padding: 10px 0;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
 
   @media ${device.md} {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
   }
 `;
 
@@ -72,34 +72,44 @@ export const Price = styled.h3`
   padding: 10px 0;
 
   @media ${device.md} {
-    ${props => props.theme.gridStyles.getColStyles(2, 2, 2)}
+    ${({ theme }) => theme.gridStyles.getColStyles(2, 2, 2)}
     padding-right: 20px;
     font-size: 2.4rem;
     text-align: right;
+    margin-right: 10px;
   }
 `;
 
 export const ButtonWrapper = styled.div`
   display: flex;
   align-items: center;
+  width: 100%;
+
+  @media ${device.md} {
+    width: 16rem;
+  }
 `;
 
 export const Button = styled.button`
-  border: 1px solid ${props => props.theme.colors.white};
-  color: ${props => props.theme.colors.white};
-  background-color: ${props => props.theme.colors.black};
+  border: 1px solid ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.black};
   cursor: pointer;
   font-size: 1.4rem;
-  font-weight: 600;
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
   line-height: 1.6rem;
   padding: 1rem 2rem;
   min-width: 6rem;
   height: 4.5rem;
   text-transform: uppercase;
-  width: 16rem;
+  width: 100%;
 
   &:hover {
-    background-color: ${props => props.theme.colors.pink};
-    color: ${props => props.theme.colors.white};
+    background-color: ${({ theme }) => theme.colors.pink};
+    color: ${({ theme }) => theme.colors.white};
+  }
+
+  @media ${device.md} {
+    width: 16rem;
   }
 `;

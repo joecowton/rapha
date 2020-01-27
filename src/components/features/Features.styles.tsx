@@ -2,8 +2,8 @@ import styled from 'styled-components/macro';
 import { device } from '../../styles/media';
 
 export const Header = styled.h3`
-  font-size: 1.8rem;
-  font-weight: 600;
+  font-size: ${({ theme }) => theme.fontSizes.header.small};
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
   line-height: 1.8rem;
   letter-spacing: 0.4px;
   text-transform: uppercase;
@@ -12,12 +12,13 @@ export const Header = styled.h3`
 
   @media ${device.md} {
     padding: 20px 0 10px;
-    font-size: 2rem;
+    font-size: ${({ theme }) => theme.fontSizes.header.large};
+    line-height: 3.6rem;
   }
 `;
 
 export const Features = styled.div`
-  ${props => props.theme.gridStyles.getContainerStyles()}
+  ${({ theme }) => theme.gridStyles.getContainerStyles()}
 `;
 
 export const Inner = styled.div`

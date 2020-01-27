@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import Account from '../icons/Account';
 import Basket from '../icons/Basket';
 import Search from '../icons/Search';
@@ -6,7 +6,7 @@ import Search from '../icons/Search';
 export const Banner = styled.div``;
 
 export const Inner = styled.div`
-  ${props => props.theme.gridStyles.getContainerStyles()}
+  ${({ theme }) => theme.gridStyles.getContainerStyles()}
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -71,11 +71,11 @@ export const IconWrapper = styled.div`
 
     circle,
     g {
-      stroke: ${props => props.theme.colors.pink};
+      stroke: ${({ theme }) => theme.colors.pink};
     }
 
     path {
-      fill: ${props => props.theme.colors.pink};
+      fill: ${({ theme }) => theme.colors.pink};
     }
   }
 `;
