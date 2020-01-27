@@ -1,8 +1,8 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components/macro';
 import { device } from '../../styles/media';
 
-export const Carousel = styled.div`
-  background-color: ${props => props.theme.colors.white};
+export const Carousel = styled.div<{ product?: boolean }>`
+  background-color: ${({ theme }) => theme.colors.white};
   height: 100%;
   position: relative;
 
@@ -12,12 +12,26 @@ export const Carousel = styled.div`
 
   .slick-slider {
     width: 100%;
+
+    ${props => {
+      if (props.product) {
+        return css`
+          @media ${device.md} {
+            width: 60%;
+          }
+
+          @media ${device.lg} {
+            width: 60%;
+          }
+        `;
+      }
+    }}
   }
 
   .MuiSvgIcon-root {
     opacity: 0;
-    color: ${props => props.theme.colors.black};
-    background: ${props => props.theme.colors.white};
+    color: ${({ theme }) => theme.colors.black};
+    background: ${({ theme }) => theme.colors.white};
     border-radius: 50%;
 
     @media ${device.md} {
@@ -36,7 +50,7 @@ export const Inner = styled.div`
   }
 
   @media ${device.md} {
-    ${props => props.theme.gridStyles.getContainerStyles()}
+    ${({ theme }) => theme.gridStyles.getContainerStyles()}
 
     opacity: 1;
   }
@@ -44,7 +58,7 @@ export const Inner = styled.div`
 
 export const NextArrow = styled.div`
   position: absolute;
-  z-index: 2;
+  z-index: ${({ theme }) => theme.indexs.arrows};
   top: calc(50% - 20px);
   right: 20px;
 
@@ -55,7 +69,7 @@ export const NextArrow = styled.div`
 
 export const PrevArrow = styled.div`
   position: absolute;
-  z-index: 2;
+  z-index: ${({ theme }) => theme.indexs.arrows};
   top: calc(50% - 20px);
   left: 20px;
 

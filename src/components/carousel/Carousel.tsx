@@ -3,24 +3,25 @@ import Slider from 'react-slick';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 
-import imageOne from '../../assets/image1.png';
-import imageTwo from '../../assets/image2.png';
-import imageThree from '../../assets/image3.png';
-
 import * as S from './Carousel.styles';
 
-interface Props {
+interface ArrowProps {
   onClick?: () => void;
 }
 
-export default () => {
-  const NextArrow = ({ onClick }: Props) => (
+interface Props {
+  children: any;
+  product?: boolean;
+}
+
+export default ({ children, product }: Props) => {
+  const NextArrow = ({ onClick }: ArrowProps) => (
     <S.NextArrow onClick={onClick}>
       <NavigateNextIcon />
     </S.NextArrow>
   );
 
-  const PrevArrow = ({ onClick }: Props) => (
+  const PrevArrow = ({ onClick }: ArrowProps) => (
     <S.PrevArrow onClick={onClick}>
       <NavigateBeforeIcon />
     </S.PrevArrow>
@@ -37,13 +38,9 @@ export default () => {
   };
 
   return (
-    <S.Carousel>
+    <S.Carousel product={product}>
       <S.Inner>
-        <Slider {...settings}>
-          <S.Image src={imageOne} />
-          <S.Image src={imageTwo} />
-          <S.Image src={imageThree} />
-        </Slider>
+        <Slider {...settings}>{children}</Slider>
       </S.Inner>
     </S.Carousel>
   );
