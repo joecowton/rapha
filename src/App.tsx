@@ -5,9 +5,10 @@ import DetailSection from './components/detailSection/DetailSection';
 import Features from './components/features/Features';
 import Footer from './components/footer/Footer';
 import HeroCarousel from './components/heroCarousel/HeroCarousel';
+import Menu from './components/menu/Menu';
 
 import * as S from './App.styles';
-import Menu from './components/menu/Menu';
+
 import { Context } from './ContextProvider';
 
 const App: React.FC = () => {

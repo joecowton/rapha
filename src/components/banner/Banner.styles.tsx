@@ -1,4 +1,4 @@
-import styled from 'styled-components/macro';
+import styled from 'styled-components';
 import Account from '../icons/Account';
 import Basket from '../icons/Basket';
 import Search from '../icons/Search';

@@ -1,4 +1,4 @@
-import styled from 'styled-components/macro';
+import styled from 'styled-components';
 
 export const StyledMenu = styled.nav<{ menuOpen: boolean }>`
   ${({ theme }) => theme.gridStyles.getContainerStyles()}
@@ -28,7 +28,7 @@ export const List = styled.ul`
 export const ListItem = styled.li`
   list-style: none;
   padding: 20px 0;
-  border-top: 1px solid lightgrey;
+  border-top: 1px solid ${({ theme }) => theme.colors.grey};
 `;
 
 export const Link = styled.a`

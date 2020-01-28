@@ -3,9 +3,7 @@ import { css } from 'styled-components/macro';
 import { device } from './media';
 
 const colors = {
-  blue: '#3476bc',
-  green: '#36b154',
-  grey: '#dce9e2',
+  grey: '#d3d3d3',
   black: '#000',
   white: '#fff',
   pink: '#f67599'
@@ -114,8 +112,11 @@ const fontWeight = {
 };
 
 const fontSizes = {
-  body: '1.6rem',
   button: '1.4rem',
+  copy: {
+    small: '1.2rem',
+    large: '1.6rem'
+  },
   header: {
     small: '2rem',
     large: '3rem'

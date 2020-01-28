@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components/macro';
+import styled, { css } from 'styled-components';
 import { device } from '../../styles/media';
 
 const LinkStyles = css`
@@ -21,7 +21,7 @@ export const AddToBasket = styled.div`
   display: flex;
   align-items: center;
   padding: 0;
-  border-top: 1px solid lightGrey;
+  border-top: 1px solid ${({ theme }) => theme.colors.grey};
   margin-top: 20px;
   flex-direction: column;
   padding: 0 0 20px;
@@ -39,7 +39,7 @@ export const SizeGuide = styled.div`
 
 export const Wishlist = styled.div`
   ${LinkStyles}
-  border-right: 1px solid lightgrey;
+  border-right: 1px solid ${({ theme }) => theme.colors.grey};;
 `;
 
 export const Section = styled.div`

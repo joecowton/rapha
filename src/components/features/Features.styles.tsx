@@ -1,4 +1,4 @@
-import styled from 'styled-components/macro';
+import styled from 'styled-components';
 import { device } from '../../styles/media';
 
 export const Header = styled.h3`
@@ -22,7 +22,7 @@ export const Features = styled.div`
 `;
 
 export const Inner = styled.div`
-  border-top: 1px solid lightgrey;
+  border-top: 1px solid ${({ theme }) => theme.colors.grey};
 `;
 
 export const ItemList = styled.div`

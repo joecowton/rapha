@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components/macro';
+import styled, { css } from 'styled-components';
 import { device } from '../../styles/media';
 
 export const Carousel = styled.div<{ product?: boolean }>`
