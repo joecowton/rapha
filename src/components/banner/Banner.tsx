@@ -1,9 +1,10 @@
 import React from 'react';
 import logo from '../../assets/logo.svg';
 import Hamburger from 'react-hamburgers';
-import { Context } from '../../ContextProvider';
 
 import * as S from './Banner.styles';
+
+import { Context } from '../../ContextProvider';
 
 export default () => {
   const { setMenuOpen, menuOpen } = React.useContext(Context);

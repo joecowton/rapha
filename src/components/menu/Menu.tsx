@@ -1,6 +1,7 @@
 import React from 'react';
 
 import * as S from './Menu.styles';
+
 import { Context } from '../../ContextProvider';
 
 export default () => {
